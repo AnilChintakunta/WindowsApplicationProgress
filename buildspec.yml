@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+       - New-Item -ItemType Junction -Path C:\Src -Value $Env:CODEBUILD_SRC_DIR
+       - cd C:\Src
+  build:
+    commands:
+       - msbuild
+       - msbuild "C:\Src\TestDotNetApp\TestDotNetApp.csproj" "/p:Platform=AnyCPU;Configuration=Release;PublishDestination=C:\Src\Publish" /t:PublishToFileSystem
+artifacts:
+  files:
+    - '**/*'
