@@ -8,7 +8,7 @@ phases:
   build:
     commands:
        - msbuild
-       - msbuild "C:\Src\TestDotNetApp\TestDotNetApp.csproj" "/p:Platform=AnyCPU;Configuration=Release;PublishDestination=C:\Src\Publish" /t:PublishToFileSystem
+       - msbuild "C:\Src\WindowsFormsApp1\WindowsFormsApp1.csproj" "/p:Platform=AnyCPU;Configuration=Release;PublishDestination=C:\Src\Publish" /t:PublishToFileSystem
 artifacts:
   files:
     - '**/*'
