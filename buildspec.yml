@@ -7,7 +7,4 @@ phases:
        - cd C:\Src
   build:
     commands:
-       - msbuild      
-artifacts:
-  files:
-    - '**/*'
+       - msbuild
