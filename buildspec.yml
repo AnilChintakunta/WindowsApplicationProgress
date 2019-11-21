@@ -7,8 +7,7 @@ phases:
        - cd C:\Src
   build:
     commands:
-       - msbuild
-       - msbuild "C:\Src\WindowsFormsApp1\WindowsFormsApp1.csproj" "/p:Platform=AnyCPU;Configuration=Release;PublishDestination=C:\Src\Publish" /t:PublishToFileSystem
+       - msbuild      
 artifacts:
   files:
     - '**/*'
